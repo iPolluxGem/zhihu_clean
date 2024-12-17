@@ -1,0 +1,87 @@
+/* ==UserStyle==
+@name         知乎简洁效果 Zhihu Clean
+@version      0.0.2
+@namespace    userstyles.world/user/gembeta000
+@description  清理知乎首页。能用就行。首页仅保留知乎 Logo、顶部 Banner 的头像入口。没弄掉搜索框热搜榜，可以自行使用广告屏蔽类工具隐藏。
+@author       gembeta000
+@license      No License
+==/UserStyle== */
+
+@-moz-document url("https://www.zhihu.com/"){
+    /*清除顶栏「首页」、「知乎知学堂」、「等你来答」、「知乎直达」按钮*/
+    #root > div > div:nth-child(2) > header > div.AppHeader-inner.css-11p8nt5 > ul{
+        display:none !important;
+    }
+    /*清除顶栏顶端闪个不停的加载条*/
+    #root > div > div.LoadingBar.css-15mhxxt{
+        display:none !important;
+    }
+    /*清除整个主页*/
+    #root > div > main > div > div.Topstory-container{
+        display:none !important;
+    }
+    #root > div > div:nth-child(2) > header > div:nth-child(2) > div{
+        display:none !important;
+    }
+    /*清除搜索框 Placeholder*/
+	input::placeholder{
+		color: #f5f5f5 !important;
+	}
+    /*清除点击搜索框后跳出的热搜*/
+    Popover1-content > div.Menu.AutoComplete-menu.SearchBar-menu.SearchBar-noValueMenu{
+        display:none !important;
+    }
+}
+
+@-moz-document url("https://www.zhihu.com/"){
+    /*主区域修正，使顶栏的知乎 Logo 和搜索框能有更大的移动空间*/
+	header.Sticky{
+		height: 100vh! important;
+	}
+    /*隐藏的分隔结构*/
+	.css-tfoxxs{
+		position: unset !important;
+		flex: unset !important;
+	}
+	.css-1xgntgp{
+		flex: unset !important;        
+	}
+    /*知乎logo调整*/
+	#root > div > div:nth-child(2) > header > div.AppHeader-inner.css-11p8nt5 > a > svg{
+		margin: auto;
+		height:80px;
+		width: 200px;
+		position: absolute;
+		left: 0%;
+		top: 800%;
+		bottom: 0;
+		right: 0;
+	}
+    /*搜索框下移到中间*/ 
+    #root > div > div:nth-child(2) > header > div.AppHeader-inner.css-11p8nt5 > div.css-1acwmmj > div{
+        width: 600px;
+    }
+    .css-10fy1q8{
+        max-width: 600px;
+        max-height: 200px !important;
+    }
+    .SearchBar-tool{
+	    margin: auto;
+		height: 150px;
+		left: 25%;
+		top: 1600%;
+	}
+    .SimpleSearchBar-wrapper{
+		margin: auto;
+		height: 130px;
+		left: 25%;
+		top: 1600%;
+	}	
+	.SimpleSearchBar-input{
+		height: 130px;
+		font-size: 50px;
+	}
+    .SearchBar{
+        height: 30px;
+    }
+}
