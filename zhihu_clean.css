@@ -46,42 +46,41 @@
 	.css-1xgntgp{
 		flex: unset !important;        
 	}
+    /*顶栏定位*/
+    #root > div > div:nth-child(2) > header{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+    #root > div > div:nth-child(2) > header > div.AppHeader-inner.css-11p8nt5{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
     /*知乎logo调整*/
 	#root > div > div:nth-child(2) > header > div.AppHeader-inner.css-11p8nt5 > a > svg{
-		margin: auto;
-		height:80px;
-		width: 200px;
-		position: absolute;
-		left: 0%;
-		top: 800%;
-		bottom: 0;
-		right: 0;
+		height: 200px;
+		width: 250px;
+        position: absolute;
+        top: 350%;
+        left: 40%;
 	}
-    /*搜索框下移到中间*/ 
-    #root > div > div:nth-child(2) > header > div.AppHeader-inner.css-11p8nt5 > div.css-1acwmmj > div{
-        width: 600px;
+    /*搜索框移动*/
+    .SearchBar-tool{
+        height: 200%;
+        overflow: hidden;
+        width: 150%;
+        z-index: 200;
+        margin: auto;
+		left: 25%;
+		top: 1070%;
     }
     .css-10fy1q8{
         max-width: 600px;
-        max-height: 200px !important;
-    }
-    .SearchBar-tool{
-	    margin: auto;
-		height: 150px;
-		left: 25%;
-		top: 1600%;
-	}
-    .SimpleSearchBar-wrapper{
-		margin: auto;
-		height: 130px;
-		left: 25%;
-		top: 1600%;
-	}	
-	.SimpleSearchBar-input{
-		height: 130px;
-		font-size: 50px;
-	}
-    .SearchBar{
-        height: 30px;
+        max-height: 200px;
     }
 }
